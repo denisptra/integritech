@@ -2,7 +2,7 @@ import { PROCESS_STEPS } from '../../data/content';
 import { Reveal } from './Reveal';
 
 export const BloomProcess = () => (
-  <section className="border-t border-line bg-soft py-16 md:py-24" aria-labelledby="process-heading">
+  <section className="border-t border-white/20 bg-gradient-to-b from-white to-ice py-16 md:py-24" aria-labelledby="process-heading">
     <div className="mx-auto max-w-site px-6">
       <Reveal>
         <div className="max-w-2xl">
@@ -21,7 +21,7 @@ export const BloomProcess = () => (
       <div className="mt-12 grid grid-cols-2 gap-4 md:mt-16 md:grid-cols-3 lg:grid-cols-5 md:gap-5">
         {PROCESS_STEPS.map((step, i) => (
           <Reveal key={step.index} delay={i * 90}>
-            <div className="relative h-full rounded-2xl border border-line bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lift md:p-6">
+            <div className="relative h-full rounded-2xl border border-white/30 bg-white/40 p-5 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:bg-white/60 hover:shadow-lift md:p-6">
               <span className="mb-3 inline-block font-display text-[11px] font-bold uppercase tracking-[0.2em] text-gold">
                 {step.index}
               </span>

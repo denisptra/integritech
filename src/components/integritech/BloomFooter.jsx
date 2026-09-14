@@ -5,7 +5,7 @@ import { Logo } from './Logo';
 const SOCIAL_ICONS = { instagram: Instagram, linkedin: Linkedin, whatsapp: MessageCircle };
 
 export const BloomFooter = () => (
-  <footer className="border-t border-line bg-soft" aria-label="Footer">
+  <footer className="border-t border-white/20 bg-white/30 backdrop-blur-lg" aria-label="Footer">
     <div className="mx-auto max-w-site px-6 py-14 md:py-16">
       <div className="grid grid-cols-1 gap-10 md:grid-cols-12">
         <div className="md:col-span-5">
@@ -23,7 +23,7 @@ export const BloomFooter = () => (
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={social.label}
-                    className="flex h-9 w-9 items-center justify-center rounded-full border border-line bg-white text-mist transition-colors duration-200 hover:border-navy hover:bg-navy hover:text-white"
+                    className="flex h-9 w-9 items-center justify-center rounded-full border border-white/30 bg-white/40 text-mist backdrop-blur-sm transition-all duration-200 hover:border-navy hover:bg-navy hover:text-white"
                   >
                     <Icon size={15} strokeWidth={1.7} />
                   </a>
@@ -63,7 +63,7 @@ export const BloomFooter = () => (
         </div>
       </div>
 
-      <div className="mt-12 flex flex-col gap-3 border-t border-line pt-7 sm:flex-row sm:items-center sm:justify-between">
+      <div className="mt-12 flex flex-col gap-3 border-t border-white/20 pt-7 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-xs text-mist">&copy; {new Date().getFullYear()} {BRAND.name}. All rights reserved.</p>
         <p className="text-xs text-mist">
           Digital System <span className="text-gold">-</span> Brand Identity <span className="text-gold">-</span> Digital Presence

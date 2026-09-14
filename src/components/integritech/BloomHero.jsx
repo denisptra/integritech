@@ -5,7 +5,7 @@ import { IndonesiaMap } from './IndonesiaMap';
 const INDICATORS = ['Digital System', 'Brand Identity', 'Digital Presence'];
 
 export const BloomHero = () => (
-  <section id="top" className="relative overflow-hidden bg-white pt-20">
+  <section id="top" className="relative overflow-hidden bg-gradient-to-b from-ice via-white to-white pt-20">
     <div className="mx-auto max-w-site px-6 pb-12 pt-16 text-center md:pt-24">
       <Reveal>
         <p className="font-display text-xs font-bold uppercase tracking-[0.24em] text-brand">
@@ -30,14 +30,14 @@ export const BloomHero = () => (
         <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a
             href="#work"
-            className="group inline-flex items-center justify-center gap-2 rounded-full bg-navy px-7 py-3.5 text-sm font-semibold text-white transition-colors duration-300 hover:bg-brand"
+            className="group inline-flex items-center justify-center gap-2 rounded-full border border-navy/20 bg-navy/80 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:bg-navy"
           >
             View Selected Work
             <ArrowRight size={15} className="transition-transform duration-300 group-hover:translate-x-1" />
           </a>
           <a
             href="#contact"
-            className="group inline-flex items-center justify-center gap-2 rounded-full border border-line bg-white px-7 py-3.5 text-sm font-semibold text-ink transition-colors duration-300 hover:border-brand hover:text-brand"
+            className="group inline-flex items-center justify-center gap-2 rounded-full border border-navy/10 bg-white/50 px-7 py-3.5 text-sm font-semibold text-ink backdrop-blur-sm transition-all duration-300 hover:border-brand hover:text-brand"
           >
             Let's Work Together
             <ArrowUpRight size={15} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

@@ -3,7 +3,7 @@ import { BRAND, SOCIAL_LINKS } from '../../data/content';
 import { Reveal } from './Reveal';
 
 export const BloomCTA = () => (
-  <section id="contact" className="scroll-mt-28 border-t border-line bg-white py-24 md:py-32" aria-labelledby="cta-heading">
+  <section id="contact" className="scroll-mt-28 border-t border-white/20 bg-gradient-to-b from-ice to-white py-24 md:py-32" aria-labelledby="cta-heading">
     <div className="mx-auto max-w-site px-6 text-center">
       <Reveal>
         <h2 id="cta-heading" className="mx-auto max-w-3xl font-display text-4xl font-extrabold leading-[1.1] tracking-tight text-navy sm:text-5xl lg:text-6xl">
@@ -22,14 +22,14 @@ export const BloomCTA = () => (
         <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a
             href={`mailto:${BRAND.email}`}
-            className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-navy px-7 py-3.5 text-sm font-semibold text-white transition-colors duration-300 hover:bg-brand sm:w-auto"
+            className="group inline-flex w-full items-center justify-center gap-2 rounded-full border border-navy/20 bg-navy/80 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:bg-navy sm:w-auto"
           >
             Start a Conversation
             <ArrowRight size={15} className="transition-transform duration-300 group-hover:translate-x-1" />
           </a>
           <a
             href={SOCIAL_LINKS.find((s) => s.id === 'whatsapp')?.href || '#'}
-            className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-line bg-white px-7 py-3.5 text-sm font-semibold text-ink transition-colors duration-300 hover:border-navy hover:text-navy sm:w-auto"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-navy/10 bg-white/50 px-7 py-3.5 text-sm font-semibold text-ink backdrop-blur-sm transition-all duration-300 hover:border-navy hover:text-navy sm:w-auto"
           >
             <MessageCircle size={15} />
             WhatsApp Us

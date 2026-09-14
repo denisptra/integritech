@@ -28,6 +28,8 @@ body {
   @apply bg-white font-sans text-ink antialiased;
   font-family: Manrope, sans-serif;
   text-rendering: optimizeLegibility;
+  background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 50%, #f0f4ff 100%);
+  min-height: 100vh;
 }
 
 ::selection {
@@ -39,6 +41,20 @@ body {
   outline: 2px solid #6677e8;
   outline-offset: 3px;
   border-radius: 2px;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-strong {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .reveal {
@@ -130,6 +146,26 @@ body {
   animation: menu-in 0.28s ease both;
 }
 
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -143,7 +179,8 @@ body {
   .map-link,
   .node-ring,
   .card-in,
-  .menu-in {
+  .menu-in,
+  .shimmer {
     animation: none !important;
   }
 }

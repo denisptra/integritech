@@ -5,7 +5,7 @@ import { Reveal } from './Reveal';
 const ICONS = { monitor: Monitor, fingerprint: Fingerprint, globe: Globe };
 
 export const BloomFeatures = () => (
-  <section id="services" className="scroll-mt-28 bg-white py-12 md:py-20">
+  <section id="services" className="scroll-mt-28 bg-gradient-to-b from-white to-ice py-12 md:py-20">
     <div className="mx-auto max-w-site px-6">
       <Reveal>
         <div className="max-w-2xl">
@@ -26,15 +26,15 @@ export const BloomFeatures = () => (
           const Icon = ICONS[service.icon];
           return (
             <Reveal key={service.id} delay={i * 100}>
-              <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lift">
-                <div className="relative h-44 overflow-hidden bg-ice">
+              <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-white/30 bg-white/40 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:bg-white/60 hover:shadow-lift">
+                <div className="relative h-44 overflow-hidden bg-gradient-to-br from-brand/10 to-brand/5">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="flex h-16 w-16 items-center justify-center rounded-full bg-brand/20 transition-transform duration-300 group-hover:scale-110">
+                    <span className="flex h-16 w-16 items-center justify-center rounded-full bg-white/40 backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
                       <Icon size={28} strokeWidth={1.4} className="text-navy" />
                     </span>
                   </div>
                   <div className="absolute bottom-4 left-5">
-                    <span className="font-display text-[11px] font-bold uppercase tracking-[0.2em] text-mist">
+                    <span className="font-display text-[11px] font-bold uppercase tracking-[0.2em] text-navy/60">
                       {service.index} / {service.eyebrow}
                     </span>
                   </div>
@@ -48,7 +48,7 @@ export const BloomFeatures = () => (
                   </p>
                   <ul className="mt-5 flex flex-wrap gap-2" aria-label={`${service.title} services`}>
                     {service.tags.map((tag) => (
-                      <li key={tag} className="rounded-full bg-ice px-3 py-1 text-[11px] font-semibold text-navy">
+                      <li key={tag} className="rounded-full border border-navy/10 bg-white/50 px-3 py-1 text-[11px] font-semibold text-navy backdrop-blur-sm">
                         {tag}
                       </li>
                     ))}

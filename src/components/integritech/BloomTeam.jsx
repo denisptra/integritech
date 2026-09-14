@@ -2,10 +2,10 @@ import { STATS, TEAM } from '../../data/content';
 import { Reveal } from './Reveal';
 
 export const BloomStats = () => (
-  <section className="border-y border-line bg-soft py-12 md:py-16">
+  <section className="border-y border-white/20 bg-gradient-to-b from-ice to-white py-12 md:py-16">
     <div className="mx-auto max-w-site px-6">
       <Reveal>
-        <div className="rounded-2xl border border-line bg-white px-7 py-10 shadow-soft md:px-12 md:py-14">
+        <div className="rounded-2xl border border-white/30 bg-white/40 px-7 py-10 shadow-soft backdrop-blur-md md:px-12 md:py-14">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
             <div>
               <p className="font-display text-xs font-bold uppercase tracking-[0.22em] text-brand">
@@ -22,7 +22,7 @@ export const BloomStats = () => (
               </p>
             </div>
 
-            <dl className="grid grid-cols-3 gap-6 lg:grid-cols-1 lg:gap-0 lg:divide-y lg:divide-line lg:border-l lg:border-line lg:pl-14">
+            <dl className="grid grid-cols-3 gap-6 lg:grid-cols-1 lg:gap-0 lg:divide-y lg:divide-white/20 lg:border-l lg:border-white/20 lg:pl-14">
               {STATS.map((stat) => (
                 <div key={stat.label} className="flex flex-col justify-center lg:py-6 lg:first:pt-0 lg:last:pb-0">
                   <dd className="order-1 font-display text-4xl font-extrabold tracking-tight text-navy md:text-5xl lg:text-[3.4rem]">
@@ -43,7 +43,7 @@ export const BloomStats = () => (
 
 const TeamCard = ({ member, delay }) => (
   <Reveal delay={delay} className="h-full">
-    <article className="group h-full overflow-hidden rounded-2xl border border-line bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lift">
+    <article className="group h-full overflow-hidden rounded-2xl border border-white/30 bg-white/40 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:bg-white/60 hover:shadow-lift">
       <div className="relative aspect-[4/5] overflow-hidden bg-grey">
         <img
           src={member.photo}

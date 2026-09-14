@@ -7,7 +7,7 @@ export const BloomNavbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 bg-white/90 backdrop-blur-md">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/20 bg-white/30 backdrop-blur-lg">
       <div className="mx-auto flex max-w-site items-center justify-between px-6 py-4">
         <Logo />
 
@@ -16,7 +16,7 @@ export const BloomNavbar = () => {
             <a
               key={link.href}
               href={link.href}
-              className="text-[13px] font-medium text-mist transition-colors duration-200 hover:text-navy"
+              className="text-[13px] font-medium text-ink/70 transition-colors duration-200 hover:text-navy"
             >
               {link.label}
             </a>
@@ -26,7 +26,7 @@ export const BloomNavbar = () => {
         <div className="flex items-center gap-3">
           <a
             href="#contact"
-            className="hidden items-center gap-1.5 rounded-full bg-navy px-5 py-2 text-[13px] font-semibold text-white transition-colors duration-300 hover:bg-brand md:inline-flex"
+            className="hidden items-center gap-1.5 rounded-full border border-navy/20 bg-navy/80 px-5 py-2 text-[13px] font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:bg-navy md:inline-flex"
           >
             Let's Talk
             <ArrowUpRight size={14} />
@@ -43,14 +43,14 @@ export const BloomNavbar = () => {
       </div>
 
       {open && (
-        <div className="fixed inset-0 z-40 bg-white px-6 pt-20 md:hidden">
+        <div className="fixed inset-0 z-40 bg-white/80 backdrop-blur-xl px-6 pt-20 md:hidden">
           <nav className="flex flex-col">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="border-b border-line py-4 font-display text-xl font-bold text-ink"
+                className="border-b border-navy/10 py-4 font-display text-xl font-bold text-ink"
               >
                 {link.label}
               </a>
@@ -59,7 +59,7 @@ export const BloomNavbar = () => {
           <a
             href="#contact"
             onClick={() => setOpen(false)}
-            className="mt-6 inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3 text-center font-semibold text-white"
+            className="mt-6 inline-flex items-center gap-2 rounded-full border border-navy/20 bg-navy/80 px-6 py-3 text-center font-semibold text-white backdrop-blur-sm"
           >
             Let's Talk
             <ArrowUpRight size={16} />

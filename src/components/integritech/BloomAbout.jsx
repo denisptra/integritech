@@ -12,7 +12,7 @@ export const BloomAbout = () => (
             </h2>
             <a
               href="#services"
-              className="group mt-6 inline-flex items-center gap-2 rounded-full border border-line bg-white px-6 py-3 text-sm font-semibold text-ink transition-all duration-300 hover:border-brand hover:text-brand"
+              className="group mt-6 inline-flex items-center gap-2 rounded-full border border-navy/10 bg-white/50 px-6 py-3 text-sm font-semibold text-ink backdrop-blur-sm transition-all duration-300 hover:border-brand hover:text-brand"
             >
               Explore now
               <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />

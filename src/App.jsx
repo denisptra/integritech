@@ -5,7 +5,6 @@ import { BloomFeatures } from './components/integritech/BloomFeatures';
 import { BloomProjects } from './components/integritech/BloomProjects';
 import { BloomStats, BloomTeam } from './components/integritech/BloomTeam';
 import { BloomProcess } from './components/integritech/BloomProcess';
-import { BloomSocial } from './components/integritech/BloomSocial';
 import { BloomCTA } from './components/integritech/BloomCTA';
 import { BloomFooter } from './components/integritech/BloomFooter';
 
@@ -29,7 +28,6 @@ function App() {
         <BloomStats />
         <BloomTeam />
         <BloomProcess />
-        <BloomSocial />
         <BloomCTA />
       </main>
 

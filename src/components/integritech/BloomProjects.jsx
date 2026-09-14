@@ -3,16 +3,15 @@ import { ArrowUpRight, ArrowRight, FolderOpen } from 'lucide-react';
 import { PROJECTS, PROJECT_CATEGORIES } from '../../data/content';
 import { Reveal } from './Reveal';
 
-const ORYZA_INSTAGRAM = 'https://instagram.com/oryza.lokabasa';
-
 const ProjectCard = ({ project, index }) => (
   <article
     style={{ animationDelay: `${index * 90}ms` }}
-    className="card-in group flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lift"
+    className="card-in group flex h-full flex-col overflow-hidden rounded-2xl border border-white/30 bg-white/40 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:bg-white/60 hover:shadow-lift"
   >
     <div className="relative aspect-[16/10] overflow-hidden bg-grey">
       <img src={project.image} alt={project.imageAlt} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
-      <span className="absolute left-4 top-4 rounded-full bg-white/95 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-navy">
+      <div className="absolute inset-0 bg-gradient-to-t from-navy/30 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+      <span className="absolute left-4 top-4 rounded-full border border-white/30 bg-white/60 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-navy backdrop-blur-sm">
         {project.categories[0]}
       </span>
     </div>
@@ -26,11 +25,11 @@ const ProjectCard = ({ project, index }) => (
       <p className="mt-3 text-sm leading-relaxed text-mist">{project.description}</p>
       <ul className="mt-5 flex flex-wrap gap-2" aria-label="Project services">
         {project.services.map((s) => (
-          <li key={s} className="rounded-full bg-ice px-3 py-1 text-[11px] font-semibold text-navy">{s}</li>
+          <li key={s} className="rounded-full border border-navy/10 bg-white/50 px-3 py-1 text-[11px] font-semibold text-navy backdrop-blur-sm">{s}</li>
         ))}
       </ul>
       <a
-        href={project.caseStudyUrl || ORYZA_INSTAGRAM}
+        href={project.caseStudyUrl}
         target="_blank"
         rel="noopener noreferrer"
         className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-navy transition-colors duration-200 hover:text-brand"
@@ -77,10 +76,10 @@ export const BloomProjects = () => {
                 role="tab"
                 aria-selected={active === cat}
                 onClick={() => setActive(cat)}
-                className={`rounded-full border px-4 py-2 text-[13px] font-semibold transition-colors duration-200 ${
+                className={`rounded-full border px-4 py-2 text-[13px] font-semibold backdrop-blur-sm transition-all duration-200 ${
                   active === cat
-                    ? 'border-navy bg-navy text-white'
-                    : 'border-line bg-white text-mist hover:border-brand hover:text-brand'
+                    ? 'border-navy/30 bg-navy/80 text-white'
+                    : 'border-white/30 bg-white/50 text-mist hover:border-brand hover:text-brand'
                 }`}
               >
                 {cat}
@@ -96,8 +95,8 @@ export const BloomProjects = () => {
             ))}
           </div>
         ) : (
-          <div className="card-in mt-9 flex flex-col items-center rounded-2xl border border-dashed border-line bg-soft px-6 py-14 text-center">
-            <span className="flex h-11 w-11 items-center justify-center rounded-full bg-ice text-navy">
+          <div className="card-in mt-9 flex flex-col items-center rounded-2xl border border-dashed border-white/30 bg-white/30 px-6 py-14 text-center backdrop-blur-md">
+            <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/50 text-navy">
               <FolderOpen size={20} strokeWidth={1.6} />
             </span>
             <p className="mt-4 font-display text-base font-bold text-ink">Projects for this category are on the way.</p>
@@ -109,7 +108,7 @@ export const BloomProjects = () => {
           <div className="mt-11 flex justify-center">
             <a
               href="#contact"
-              className="group inline-flex items-center gap-2 rounded-full border border-navy px-6 py-3 text-sm font-semibold text-navy transition-colors duration-300 hover:bg-navy hover:text-white"
+              className="group inline-flex items-center gap-2 rounded-full border border-navy/30 bg-navy/80 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:bg-navy"
             >
               View All Projects
               <ArrowRight size={15} className="transition-transform duration-300 group-hover:translate-x-1" />

@@ -11,11 +11,6 @@ export const SOCIAL_LINKS = [
   { id: "whatsapp", label: "WhatsApp", href: "#" }
 ];
 
-export const MANAGED_ACCOUNTS = [
-  { handle: "@integritech.id", note: "Our studio", href: "https://instagram.com/integritech.id" },
-  { handle: "@oryza.lokabasa", note: "Client's official account — handled by us", href: "https://instagram.com/oryza.lokabasa" }
-];
-
 export const NAV_LINKS = [
   { label: "Services", href: "#services" },
   { label: "Selected Work", href: "#work" },
@@ -60,13 +55,13 @@ export const SERVICES = [
   }
 ];
 
-export const PROJECT_CATEGORIES = ["All", "Digital System", "Website", "Mobile App", "Branding", "Social Media"];
+export const PROJECT_CATEGORIES = ["All", "Website", "Branding", "Social Media"];
 
 export const PROJECTS = [
   {
     title: "Oryza Lokabasa — Arts, Language & Culture Community",
     slug: "oryza-lokabasa",
-    categories: ["Website", "Branding", "Social Media"],
+    categories: ["Website", "Branding"],
     description: "Designed and built the website for an arts, language, and culture community — and we continue to manage its branding and social media presence.",
     image: "https://oryzalokabasa.com/Community.jpg",
     imageAlt: "Oryza Lokabasa arts and culture community website",
@@ -74,6 +69,30 @@ export const PROJECTS = [
     year: "2026",
     featured: true,
     caseStudyUrl: "https://oryzalokabasa.com"
+  },
+  {
+    title: "Agrowisata Darangdan — Tourism Platform",
+    slug: "agrowisata-darangdan",
+    categories: ["Website"],
+    description: "A tourism platform for Agrowisata Darangdan, showcasing agricultural tourism experiences, booking features, and location information.",
+    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&h=500&q=80",
+    imageAlt: "Agrowisata Darangdan tourism platform",
+    services: ["UX/UI", "Web Development"],
+    year: "2025",
+    featured: true,
+    caseStudyUrl: "https://agrowisatadarangdan.oryzalokabasa.com"
+  },
+  {
+    title: "Padjadjaran Pusat — Organization Hub",
+    slug: "padjadjaran-pusat",
+    categories: ["Website"],
+    description: "A centralized digital hub for Padjadjaran Pusat, providing organizational information, news, and community engagement features.",
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&h=500&q=80",
+    imageAlt: "Padjadjaran Pusat organization hub",
+    services: ["UX/UI", "Web Development"],
+    year: "2025",
+    featured: false,
+    caseStudyUrl: "https://padjadjaranpusat.org"
   },
   {
     title: "Desa Sidomulyo — Official Village Website",
@@ -84,7 +103,7 @@ export const PROJECTS = [
     imageAlt: "Desa Sidomulyo official village website",
     services: ["UX/UI", "Web Development"],
     year: "2026",
-    featured: true,
+    featured: false,
     caseStudyUrl: "https://sidomulyobatu.id"
   }
 ];
@@ -107,31 +126,4 @@ export const PROCESS_STEPS = [
   { index: "03", title: "Design", description: "Shaping the experience, identity, and visual direction." },
   { index: "04", title: "Build", description: "Turning solutions into usable digital products." },
   { index: "05", title: "Deliver", description: "Launching, refining, and continuously growing." }
-];
-
-export const SOCIAL_POSTS = [
-  {
-    id: "post-projects",
-    category: "Projects",
-    title: "Behind the build: launching the Oryza Lokabasa community platform",
-    meta: "Instagram · Project update",
-    image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    imageAlt: "Interface design process on a studio desk"
-  },
-  {
-    id: "post-insights",
-    category: "Design Insights",
-    title: "Why a design system keeps a brand consistent",
-    meta: "Instagram · Design insight",
-    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=940&h=650&q=80",
-    imageAlt: "Design tools and visual identity sketches"
-  },
-  {
-    id: "post-behind",
-    category: "Behind the Work",
-    title: "Exploring visual identity directions in the studio this week",
-    meta: "Instagram · Studio notes",
-    image: "https://images.unsplash.com/photo-1713873010288-c4617fc2b15b?auto=format&fit=crop&w=940&h=650&q=80",
-    imageAlt: "Minimal brand identity mockup on paper"
-  }
 ];
