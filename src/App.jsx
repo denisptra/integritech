@@ -1,13 +1,13 @@
-import { Navbar } from './components/integritech/Navbar';
-import { Hero } from './components/integritech/Hero';
-import { Services } from './components/integritech/Services';
-import { Projects } from './components/integritech/Projects';
-import { About } from './components/integritech/About';
-import { Team } from './components/integritech/Team';
-import { Process } from './components/integritech/Process';
-import { Social } from './components/integritech/Social';
-import { CTA } from './components/integritech/CTA';
-import { Footer } from './components/integritech/Footer';
+import { BloomNavbar } from './components/integritech/BloomNavbar';
+import { BloomHero } from './components/integritech/BloomHero';
+import { BloomAbout } from './components/integritech/BloomAbout';
+import { BloomFeatures } from './components/integritech/BloomFeatures';
+import { BloomProjects } from './components/integritech/BloomProjects';
+import { BloomStats, BloomTeam } from './components/integritech/BloomTeam';
+import { BloomProcess } from './components/integritech/BloomProcess';
+import { BloomSocial } from './components/integritech/BloomSocial';
+import { BloomCTA } from './components/integritech/BloomCTA';
+import { BloomFooter } from './components/integritech/BloomFooter';
 
 function App() {
   return (
@@ -19,20 +19,21 @@ function App() {
         Skip to content
       </a>
 
-      <Navbar />
+      <BloomNavbar />
 
       <main>
-        <Hero />
-        <Services />
-        <Projects />
-        <About />
-        <Team />
-        <Process />
-        <Social />
-        <CTA />
+        <BloomHero />
+        <BloomAbout />
+        <BloomFeatures />
+        <BloomProjects />
+        <BloomStats />
+        <BloomTeam />
+        <BloomProcess />
+        <BloomSocial />
+        <BloomCTA />
       </main>
 
-      <Footer />
+      <BloomFooter />
     </div>
   );
 }
