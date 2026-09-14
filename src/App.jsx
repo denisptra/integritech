@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { BloomNavbar } from './components/integritech/BloomNavbar';
 import { BloomHero } from './components/integritech/BloomHero';
 import { BloomAbout } from './components/integritech/BloomAbout';
@@ -9,6 +10,8 @@ import { BloomCTA } from './components/integritech/BloomCTA';
 import { BloomFooter } from './components/integritech/BloomFooter';
 
 function App() {
+  const [lang, setLang] = useState('en');
+
   return (
     <div className="min-h-screen bg-white">
       <a
@@ -18,20 +21,20 @@ function App() {
         Skip to content
       </a>
 
-      <BloomNavbar />
+      <BloomNavbar lang={lang} setLang={setLang} />
 
       <main>
-        <BloomHero />
-        <BloomAbout />
-        <BloomFeatures />
-        <BloomProjects />
-        <BloomStats />
-        <BloomTeam />
-        <BloomProcess />
-        <BloomCTA />
+        <BloomHero lang={lang} />
+        <BloomAbout lang={lang} />
+        <BloomFeatures lang={lang} />
+        <BloomProjects lang={lang} />
+        <BloomStats lang={lang} />
+        <BloomTeam lang={lang} />
+        <BloomProcess lang={lang} />
+        <BloomCTA lang={lang} />
       </main>
 
-      <BloomFooter />
+      <BloomFooter lang={lang} />
     </div>
   );
 }

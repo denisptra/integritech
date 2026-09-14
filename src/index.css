@@ -28,7 +28,7 @@ body {
   @apply bg-white font-sans text-ink antialiased;
   font-family: Manrope, sans-serif;
   text-rendering: optimizeLegibility;
-  background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 50%, #f0f4ff 100%);
+  background: #ffffff;
   min-height: 100vh;
 }
 
