@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 233 46% 13%;
+  --primary: 236 48% 31%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 231 100% 97%;
+  --secondary-foreground: 236 48% 31%;
+  --muted: 222 43% 96%;
+  --muted-foreground: 228 11% 49%;
+  --border: 224 27% 93%;
+  --ring: 232 74% 66%;
+  --radius: 0.5rem;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white font-sans text-ink antialiased;
+  font-family: Manrope, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #6677e8;
+  color: #ffffff;
+}
+
+:focus-visible {
+  outline: 2px solid #6677e8;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-in {
+  animation: card-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes map-float {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-8px);
+  }
+}
+
+.map-float {
+  animation: map-float 8s ease-in-out infinite alternate;
+}
+
+@keyframes dash-travel {
+  to {
+    stroke-dashoffset: -140;
+  }
+}
+
+.map-link {
+  stroke-dasharray: 4 8;
+  animation: dash-travel 10s linear infinite;
+}
+
+@keyframes node-pulse {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.55;
+  }
+  70% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+
+.node-ring {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: node-pulse 3.4s ease-out infinite;
+}
+
+@keyframes menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-in {
+  animation: menu-in 0.28s ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .map-float,
+  .map-link,
+  .node-ring,
+  .card-in,
+  .menu-in {
+    animation: none !important;
+  }
+}
