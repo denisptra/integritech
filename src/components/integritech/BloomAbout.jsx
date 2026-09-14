@@ -4,15 +4,15 @@ import { Reveal } from './Reveal';
 export const BloomAbout = () => (
   <section id="about" className="scroll-mt-28 bg-white py-16 md:py-24">
     <div className="mx-auto max-w-site px-6">
-      <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
+      <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20">
         <Reveal>
           <div>
-            <h2 className="font-display text-3xl font-extrabold tracking-tight text-ink md:text-4xl lg:text-5xl">
+            <h2 className="font-display text-3xl font-extrabold tracking-tight text-ink md:text-[2.75rem] leading-[1.1]">
               What is INTEGRITECH?
             </h2>
             <a
               href="#services"
-              className="group mt-6 inline-flex items-center gap-2 rounded-full border border-navy/10 bg-white/50 px-6 py-3 text-sm font-semibold text-ink backdrop-blur-sm transition-all duration-300 hover:border-brand hover:text-brand"
+              className="group mt-8 inline-flex items-center gap-2 rounded-full bg-navy px-7 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-brand"
             >
               Explore now
               <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
@@ -20,8 +20,8 @@ export const BloomAbout = () => (
           </div>
         </Reveal>
 
-        <Reveal delay={200}>
-          <p className="text-base leading-relaxed text-mist md:text-lg">
+        <Reveal delay={150}>
+          <p className="text-base leading-[1.8] text-mist md:text-lg">
             INTEGRITECH is a digital studio that helps businesses build digital systems, meaningful brands, and better digital experiences — combining strategy, design, and technology to create solutions that are simple, relevant, and focused.
           </p>
         </Reveal>
