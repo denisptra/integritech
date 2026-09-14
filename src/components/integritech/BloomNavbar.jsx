@@ -25,10 +25,12 @@ export const BloomNavbar = () => {
 
         <div className="flex items-center gap-3">
           <a
-            href="#contact"
+            href="https://instagram.com/integritech.id"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden items-center gap-1.5 rounded-full border border-navy/20 bg-navy/80 px-5 py-2 text-[13px] font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:bg-navy md:inline-flex"
           >
-            Let's Talk
+            Let's Contact
             <ArrowUpRight size={14} />
           </a>
           <button
@@ -57,11 +59,13 @@ export const BloomNavbar = () => {
             ))}
           </nav>
           <a
-            href="#contact"
+            href="https://instagram.com/integritech.id"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setOpen(false)}
             className="mt-6 inline-flex items-center gap-2 rounded-full border border-navy/20 bg-navy/80 px-6 py-3 text-center font-semibold text-white backdrop-blur-sm"
           >
-            Let's Talk
+            Let's Contact
             <ArrowUpRight size={16} />
           </a>
         </div>

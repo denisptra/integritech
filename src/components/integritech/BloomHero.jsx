@@ -3,14 +3,8 @@ import { Reveal } from './Reveal';
 import { IndonesiaMap } from './IndonesiaMap';
 
 export const BloomHero = () => (
-  <section id="top" className="relative overflow-hidden bg-white pt-20">
-    <div className="mx-auto max-w-site px-6 pb-8 pt-16 text-center md:pt-24">
-      <Reveal>
-        <div className="mx-auto mb-6 flex h-10 w-10 items-center justify-center">
-          <span className="text-2xl font-bold text-navy">+</span>
-        </div>
-      </Reveal>
-
+  <section id="top" className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-white pt-20">
+    <div className="mx-auto max-w-site px-6 pb-8 pt-16 text-center">
       <Reveal delay={100}>
         <h1 className="font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
           <span className="block text-ink">BUILD DIGITAL.</span>
@@ -36,7 +30,7 @@ export const BloomHero = () => (
     </div>
 
     <Reveal delay={400}>
-      <div className="mx-auto max-w-5xl px-6">
+      <div className="mx-auto max-w-4xl px-6 pb-12">
         <IndonesiaMap />
       </div>
     </Reveal>

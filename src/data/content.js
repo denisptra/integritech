@@ -7,8 +7,8 @@ export const BRAND = {
 
 export const SOCIAL_LINKS = [
   { id: "instagram", label: "Instagram", href: "https://instagram.com/integritech.id" },
-  { id: "linkedin", label: "LinkedIn", href: "#" },
-  { id: "whatsapp", label: "WhatsApp", href: "#" }
+  { id: "linkedin", label: "LinkedIn", href: "https://linkedin.com/company/integritech" },
+  { id: "whatsapp", label: "WhatsApp", href: "https://wa.me/6281234567890" }
 ];
 
 export const NAV_LINKS = [

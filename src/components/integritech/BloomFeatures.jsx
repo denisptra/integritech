@@ -11,9 +11,20 @@ const GRADIENTS = [
 ];
 
 export const BloomFeatures = () => (
-  <section id="services" className="scroll-mt-28 bg-white py-8 md:py-12">
+  <section id="services" className="scroll-mt-28 bg-white py-12 md:py-16">
     <div className="mx-auto max-w-site px-6">
-      <div className="grid grid-cols-1 gap-5 md:grid-cols-3 md:gap-5">
+      <Reveal>
+        <div className="max-w-2xl">
+          <p className="font-display text-xs font-bold uppercase tracking-[0.22em] text-brand">
+            02 / What we do
+          </p>
+          <h2 className="mt-5 font-display text-3xl font-extrabold tracking-tight text-ink leading-[1.12] md:text-5xl">
+            Technology that works.<br />Design that speaks.
+          </h2>
+        </div>
+      </Reveal>
+
+      <div className="mt-10 grid grid-cols-1 gap-5 md:mt-12 md:grid-cols-3 md:gap-5">
         {SERVICES.map((service, i) => {
           const Icon = ICONS[service.icon];
           return (
