@@ -24,7 +24,7 @@ export const IndonesiaMap = () => {
   const paths = useMemo(() => INDONESIA_PATHS, []);
 
   return (
-    <div className="map-float relative" aria-hidden="true">
+    <div className="relative" aria-hidden="true">
       <div className="absolute inset-x-8 top-1/2 -z-10 h-40 -translate-y-1/2 rounded-full bg-ice opacity-60 blur-3xl" />
 
       <svg
@@ -67,7 +67,6 @@ export const IndonesiaMap = () => {
 
         {HUBS.map((h) => (
           <g key={`${h.x}-${h.y}`}>
-            <circle cx={h.x} cy={h.y} r="7" fill={h.gold ? '#C9AA62' : '#6677E8'} opacity="0.3" className="node-ring" style={{ animationDelay: h.delay }} />
             <circle cx={h.x} cy={h.y} r="3.2" fill={h.gold ? '#C9AA62' : '#292A73'} stroke="#FFFFFF" strokeWidth="1.3" />
           </g>
         ))}

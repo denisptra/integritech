@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { NAV_LINKS, TRANSLATIONS } from '../../data/content';
 import { Logo } from './Logo';
@@ -6,21 +7,40 @@ import { Logo } from './Logo';
 export const BloomNavbar = ({ lang, setLang }) => {
   const [open, setOpen] = useState(false);
   const t = TRANSLATIONS[lang];
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
+
+  const getNavHref = (href) => {
+    if (isHomePage) return href;
+    return `/${href}`;
+  };
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-line bg-white/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-site items-center justify-between px-6 py-4">
-        <Logo />
+        <Link to="/">
+          <Logo />
+        </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
           {NAV_LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-[13px] font-medium text-mist transition-colors duration-200 hover:text-navy"
-            >
-              {link.label}
-            </a>
+            isHomePage ? (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-[13px] font-medium text-mist transition-colors duration-200 hover:text-navy"
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link
+                key={link.href}
+                to={`/${link.href}`}
+                className="text-[13px] font-medium text-mist transition-colors duration-200 hover:text-navy"
+              >
+                {link.label}
+              </Link>
+            )
           ))}
         </nav>
 
@@ -55,14 +75,25 @@ export const BloomNavbar = ({ lang, setLang }) => {
         <div className="fixed inset-0 z-40 bg-white px-6 pt-20 md:hidden">
           <nav className="flex flex-col">
             {NAV_LINKS.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className="border-b border-line py-4 font-display text-xl font-bold text-ink"
-              >
-                {link.label}
-              </a>
+              isHomePage ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className="border-b border-line py-4 font-display text-xl font-bold text-ink"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.href}
+                  to={`/${link.href}`}
+                  onClick={() => setOpen(false)}
+                  className="border-b border-line py-4 font-display text-xl font-bold text-ink"
+                >
+                  {link.label}
+                </Link>
+              )
             ))}
           </nav>
           <a

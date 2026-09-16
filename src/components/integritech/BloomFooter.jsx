@@ -1,3 +1,4 @@
+import { Link, useLocation } from 'react-router-dom';
 import { Instagram, Linkedin, Mail, MapPin, MessageCircle } from 'lucide-react';
 import { BRAND, SOCIAL_LINKS, FOOTER_LINKS, TRANSLATIONS } from '../../data/content';
 import { Logo } from './Logo';
@@ -6,6 +7,8 @@ const SOCIAL_ICONS = { instagram: Instagram, linkedin: Linkedin, whatsapp: Messa
 
 export const BloomFooter = ({ lang }) => {
   const t = TRANSLATIONS[lang];
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   return (
     <footer className="border-t border-line bg-soft" aria-label="Footer">
@@ -41,9 +44,15 @@ export const BloomFooter = ({ lang }) => {
             <ul className="mt-4 space-y-2.5">
               {FOOTER_LINKS.map((link) => (
                 <li key={link.href}>
-                  <a href={link.href} className="text-[13px] font-medium text-mist transition-colors duration-200 hover:text-navy">
-                    {link.label}
-                  </a>
+                  {isHomePage ? (
+                    <a href={link.href} className="text-[13px] font-medium text-mist transition-colors duration-200 hover:text-navy">
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link to={`/${link.href}`} className="text-[13px] font-medium text-mist transition-colors duration-200 hover:text-navy">
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

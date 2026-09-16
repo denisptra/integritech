@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { BloomNavbar } from './components/integritech/BloomNavbar';
 import { BloomHero } from './components/integritech/BloomHero';
 import { BloomAbout } from './components/integritech/BloomAbout';
@@ -8,6 +9,22 @@ import { BloomStats, BloomTeam } from './components/integritech/BloomTeam';
 import { BloomProcess } from './components/integritech/BloomProcess';
 import { BloomCTA } from './components/integritech/BloomCTA';
 import { BloomFooter } from './components/integritech/BloomFooter';
+import { ProjectPage } from './components/integritech/ProjectPage';
+
+function HomePage({ lang }) {
+  return (
+    <>
+      <BloomHero lang={lang} />
+      <BloomAbout lang={lang} />
+      <BloomFeatures lang={lang} />
+      <BloomProjects lang={lang} />
+      <BloomStats lang={lang} />
+      <BloomTeam lang={lang} />
+      <BloomProcess lang={lang} />
+      <BloomCTA lang={lang} />
+    </>
+  );
+}
 
 function App() {
   const [lang, setLang] = useState('en');
@@ -24,14 +41,10 @@ function App() {
       <BloomNavbar lang={lang} setLang={setLang} />
 
       <main>
-        <BloomHero lang={lang} />
-        <BloomAbout lang={lang} />
-        <BloomFeatures lang={lang} />
-        <BloomProjects lang={lang} />
-        <BloomStats lang={lang} />
-        <BloomTeam lang={lang} />
-        <BloomProcess lang={lang} />
-        <BloomCTA lang={lang} />
+        <Routes>
+          <Route path="/" element={<HomePage lang={lang} />} />
+          <Route path="/project/:slug" element={<ProjectPage lang={lang} />} />
+        </Routes>
       </main>
 
       <BloomFooter lang={lang} />
